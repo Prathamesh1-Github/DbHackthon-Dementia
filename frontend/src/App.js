@@ -15,9 +15,15 @@ import DementiaDiaries from './Components/DementiaDiaries'
 import ProfilePage from './Components/ProfilePage'
 import DementiaTypes from './Components/DementiaTypes';
 import HelpSection from './Components/HelpSection';
+import Quiz from './Components/Quiz';
+import Result from './Components/Quiz';
+import { DataProvider } from './context/dataContext';
+import PatientBehaviour from './Components/PatientBehaviour'
 
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import VideoPlayer from './Components/VideoPlayer';
+
+import Meditation from '../src/Components/Mediation'
 
 
 const App = () => {
@@ -39,7 +45,14 @@ const App = () => {
                     <Route path="/dementiatypes" element={<DementiaTypes />} />
                     <Route path="/dementiadiaries" element={<DementiaDiaries />} />
                     <Route path="/helpsection" element={<HelpSection />} />
+                    <Route path="/daily-checkin" element={<PatientBehaviour />} />
+                    <Route path="/doctor-portal" element={<VideoCall />} />
                     <Route path='/comics' exact element={<VideoPlayer/>}></Route>
+                    <Route path="/videocall/:id" exact element={<RoomPage/>}></Route>
+                    <Route path='/meditation' exact element={<Meditation/>}></Route>
+                    <Route path='/quiz' exact element={<DataProvider>
+      <Quiz/>
+    </DataProvider>}></Route>
                 </Routes>
             </BrowserRouter>
         </div>

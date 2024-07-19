@@ -10,7 +10,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light ">
-            <NavLink className="navbar-brand" to="/dashboard">Dimensia</NavLink>
+            <NavLink className="navbar-brand" to="/dashboard">Dementia</NavLink>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -26,7 +26,7 @@ const Navbar = () => {
                         <NavLink className="nav-link" to="/calender">Calendar</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/training">Dimensia Learning</NavLink>
+                        <NavLink className="nav-link" to="/training">Dementia Learning</NavLink>
                     </li>
                 </ul>
             </div>

@@ -80,7 +80,7 @@ const faqData = [
         
         Despite ongoing research to better understand NPH's prevalence and mechanisms, nonsurgical treatments like diuretics have not proven effective. Further studies are needed to refine diagnostic criteria, improve treatment outcomes, and extend understanding of how CSF dynamics contribute to NPH symptoms.
       `,
-    videoSrc: "/videos/video6.mp4", // Path to local video file
+    videoSrc: "/videos/mixed.mp4", // Path to local video file
   },
   {
     question: "Posterior Cortical Atrophy (PCA)",
@@ -91,7 +91,7 @@ const faqData = [
         
         Treatment focuses on managing symptoms, as there are no therapies to halt PCA's progression. Some treatments used for Alzheimer's may be considered, but no specific medications target PCA. Ongoing research aims to improve understanding of PCA and develop more effective treatments.
       `,
-    videoSrc: "/videos/video7.mp4", // Path to local video file
+    videoSrc: "/videos/mixed.mp4", // Path to local video file
   },
 ];
 

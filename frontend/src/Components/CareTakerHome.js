@@ -5,10 +5,17 @@ import FeaturesImage2 from "../Assets/Images/startimage.png";
 import FeaturesImage3 from "../Assets/Images/startimage.png";
 import { Button } from "@mui/material";
 import NavigationDialog from "./NavigationDialog"; // Import the dialog component
+import { useNavigate } from 'react-router-dom';
 
 const CareTakerHome = () => {
     const [dialogOpen, setDialogOpen] = useState(false);
     const [dialogOptions, setDialogOptions] = useState([]);
+
+    const navigate = useNavigate();
+
+    const handleNavigate = (path) => {
+        navigate(path);
+    };
 
     const handleDialogOpen = (options) => {
         setDialogOptions(options);
@@ -21,9 +28,8 @@ const CareTakerHome = () => {
 
     const options1 = [
         { label: 'Patient Details', path: '/patient-details', bgColor: '#e3f2fd', textColor: '#1e88e5' },
-        { label: 'Assigned Tasks', path: '/calender', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Patient Location', path: '/map', bgColor: '#e3f2fd', textColor: '#1e88e5' },
-        { label: 'Medical History', path: '/medical-history', bgColor: '#e3f2fd', textColor: '#1e88e5' },
+        { label: 'Doctor Portal', path: '/doctor-portal', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Daily CheckIn', path: '/daily-checkin', bgColor: '#e3f2fd', textColor: '#1e88e5' },
     ];
 
@@ -44,7 +50,7 @@ const CareTakerHome = () => {
                         <Button>Ask Me</Button>
                     </div>
                     <div style={{width: '150px', backgroundColor: 'lavender', padding: '15px', borderBottomLeftRadius: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                        <Button>Book Appointment</Button>
+                        <Button onClick={() => handleNavigate('/calender')}>Book Appointment</Button>
                     </div>
                 </div>
             </div>
@@ -65,11 +71,11 @@ const CareTakerHome = () => {
                 <div className="big-feature-section" >
                     <div className="big-feature-container" style={{  backgroundColor: 'lavender' }}>
                         <div className="features-desc">
-                            <h4>More About Dimensia</h4>
-                            <p>Learn more about Dimensia.</p>
+                            <h4>More About Dementia</h4>
+                            <p>Learn more about Dementia.</p>
                         </div>
                         <div className="feature-image">
-                            <img src={FeaturesImage2} alt="More About Dimensia"></img>
+                            <img src={FeaturesImage2} alt="More About Dementia"></img>
                         </div>
                     </div>
                 </div>
